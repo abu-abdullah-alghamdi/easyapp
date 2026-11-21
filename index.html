@@ -1089,14 +1089,17 @@ body.lang-switching { opacity: 0; }
 <script src="assets/js/lenis.min.js"></script>
 <script>
 (function () {
-  // ---- سكرول ناعم (Lenis) على الكمبيوتر والتابلت والجوال ----
+  // ---- سكرول ناعم (Lenis) على الكمبيوتر والتابلت فقط ----
+  // الجوال (شاشة لمس صغيرة، عمودي أو أفقي) يستخدم سكرول الجهاز الطبيعي
   // lerp: كل ما صغر الرقم صار السكرول أنعم وأبطأ (0.1 الافتراضي)
+  var isPhone = window.matchMedia &&
+    matchMedia('(pointer: coarse) and (max-width: 640px), (pointer: coarse) and (max-height: 640px)').matches;
   var lenis = null;
-  if (window.Lenis) {
+  if (window.Lenis && !isPhone) {
     lenis = window.__lenis = new Lenis({
       lerp: 0.08,
       smoothWheel: true,
-      syncTouch: true,        // تفعيل النعومة على اللمس (تابلت وجوال)
+      syncTouch: true,        // تفعيل النعومة على اللمس (تابلت)
       syncTouchLerp: 0.08,
       anchors: { offset: 0 }, // روابط # تنزل بنفس النعومة
       autoRaf: true
