@@ -1,6 +1,6 @@
-# easy app للتجار
+# azirapp للتجار
 
-صفحة هبوط easy app للتجار — عربي (RTL) وإنجليزي (LTR) في صفحة واحدة مع زر تبديل اللغة.
+صفحة هبوط azirapp للتجار — عربي (RTL) وإنجليزي (LTR) في صفحة واحدة مع زر تبديل اللغة.
 
 ## الملفات
 
@@ -11,7 +11,7 @@ assets/
   js/lenis.min.js   السكرول الناعم (Lenis 1.3.26 — MIT)
   hero-bg.webp      خلفية القسم الأول
   app-store.webp    صورة واجهة المتجر
-  easyapp-icon.svg  أيقونة easyapp في دائرة الربط
+  favicon.svg       أيقونة تاب المتصفح
   logo-black.svg / logo-white.svg
 ```
 
